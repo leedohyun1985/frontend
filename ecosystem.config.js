@@ -1,4 +1,5 @@
 module.exports = {
+  // pm2를 사용하기 위한 설정
   apps: [{
     name: 'frontend',
     exec_mode: 'cluster',
