@@ -53,7 +53,8 @@
 
     <p class="mt-4">
       Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
+      Sliding: {{ sliding }}<br>
+      message: {{ message }}
     </p>
   </div>
 </template>
@@ -64,6 +65,11 @@ export default {
     return {
       slide: 0,
       sliding: null
+    }
+  },
+  computed: {
+    message () {
+      return process.env.MODE
     }
   },
   methods: {
