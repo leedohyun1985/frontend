@@ -99,6 +99,7 @@ export default {
   mounted () {
   },
   methods: {
+
   },
   css: [
     '@/assets/css/carousel.css'
