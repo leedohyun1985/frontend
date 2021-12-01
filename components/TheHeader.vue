@@ -7,10 +7,29 @@
           BootstrapVue
         </b-navbar-brand>
 
-        <b-navbar-nav class="mx-auto">
-          <b-nav-form>
+        <b-navbar-nav>
+          <b-nav-item href="#">
+            Address
+          </b-nav-item>
+        </b-navbar-nav>
+
+        <b-navbar-nav class="mx-auto col-sm-8">
+          <b-input-group>
+            <template #prepend>
+              <b-dropdown text="All">
+                <b-dropdown-item>Action A</b-dropdown-item>
+                <b-dropdown-item>Action B</b-dropdown-item>
+              </b-dropdown>
+            </template>
+
             <b-form-input placeholder="검색어를 입력하세요." type="search" />
-          </b-nav-form>
+
+            <template #append>
+              <b-input-group-text>
+                <b-icon-search />
+              </b-input-group-text>
+            </template>
+          </b-input-group>
         </b-navbar-nav>
 
         <b-navbar-nav class="ml-auto">
@@ -41,6 +60,12 @@
               Sign Out
             </b-dropdown-item>
           </b-nav-item-dropdown>
+
+          <b-navbar-nav>
+            <b-nav-item href="#">
+              Returns & Order
+            </b-nav-item>
+          </b-navbar-nav>
         </b-navbar-nav>
       </b-navbar>
     </div>
