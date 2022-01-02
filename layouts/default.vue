@@ -57,7 +57,7 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-
+      <!--
       <v-menu bottom offset-y>
         <template #activator="{on, attrs}">
           <v-btn depressed v-bind="attrs" v-on="on" v-text="$i18n.localeProperties.name" />
@@ -68,6 +68,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
+       -->
     </v-app-bar>
     <v-main>
       <v-container>
@@ -127,9 +128,9 @@ export default {
     }
   },
   computed: {
-    availableLocales () {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
+    // availableLocales () {
+    //   return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    // }
   }
 }
 </script>
