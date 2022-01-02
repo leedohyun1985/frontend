@@ -57,18 +57,17 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <!--
+
       <v-menu bottom offset-y>
         <template #activator="{on, attrs}">
           <v-btn depressed v-bind="attrs" v-on="on" v-text="$i18n.localeProperties.name" />
         </template>
         <v-list>
-          <v-list-item v-for="locale in $i18n.locales" :key="locale.code" :to="switchLocalePath(locale.code)" nuxt @click="$i18n.setLocale(locale.code)">
+          <v-list-item v-for="locale in availableLocales" :key="locale.code" @click.prevent.stop="$i18n.setLocale(locale.code)">
             <v-list-item-title>{{ locale.name }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
-       -->
     </v-app-bar>
     <v-main>
       <v-container>
@@ -125,6 +124,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: this.$t('Layout.title')
+    }
+  },
+  computed: {
+    availableLocales () {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   }
 }
