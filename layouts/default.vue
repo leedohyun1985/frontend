@@ -51,14 +51,13 @@
       <v-toolbar-title v-text="$t('Layout.title')" />
       <v-spacer />
 
-      <!--
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-       -->
+      <!--
       <v-menu bottom offset-y>
         <template #activator="{on, attrs}">
           <v-btn depressed v-bind="attrs" v-on="on" v-text="$i18n.localeProperties.name" />
@@ -69,6 +68,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
+       -->
     </v-app-bar>
     <v-main>
       <v-container>
