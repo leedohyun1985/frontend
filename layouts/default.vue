@@ -48,7 +48,7 @@
       >
         <v-icon>mdi-minus</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="$t('Layout.title')" />
+      <v-toolbar-title v-text="title" />
       <v-spacer />
 
       <v-btn
@@ -124,7 +124,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: this.$t('Layout.title')
+      title: '이도현의 연구실'
     }
   },
   computed: {
